@@ -29,19 +29,19 @@ $ cat /home/your_user/.ssh/github_personal.pub
 - Repeat both steps for `github_work.pub`.
 
 ## Third step: setup configuration files 
-- First we are gonna create a `github_config` file in our user `.ssh` folder and we will include the following info (you do not have to modify it at all):
+- First we are gonna create a `github_config` file in our user `.ssh` folder and we will include the following info (just change your_user, the rest you do not have to modify it at all):
 ````
 $ tee /home/your_user/.ssh/github_config <<EOF
 # Personal account 
 Host github.com-personal
    HostName github.com
    User git
-   IdentityFile ~/.ssh/github_personal
+   IdentityFile /home/your_user/.ssh/github_personal
 # Work account
 Host github.com-work
    HostName github.com
    User git
-   IdentityFile ~/.ssh/github_work
+   IdentityFile /home/your_user/.ssh/github_work
 EOF
 ````
 - Second we are gonna create a `.gitconfig` file in our user root directory (replace name and email):
